@@ -49,9 +49,9 @@ class CBABank < Bank
   include Logger
 
   BANK_USERS = [
-    "ahmed",
-    "mohamed",
-    "galal"
+    "Ali",
+    "Peter",
+    "Manda"
   ].freeze
 
   def process_transactions(transactions, callback)
