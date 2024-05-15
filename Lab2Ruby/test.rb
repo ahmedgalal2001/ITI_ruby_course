@@ -49,14 +49,13 @@ class CBABank < Bank
   include Logger
 
   BANK_USERS = [
-    "ahmed",
-    "mohamed",
-    "galal"
+    "Ali",
+    "Peter",
+    "Manda"
   ].freeze
 
   def process_transactions(transactions, callback)
     log_info("Processing Transactions #{transactions.map { |t| "#{t.user.name} transaction with value #{t.value}" }.join(', ')}...")
-
     transactions.each do |transaction|
       begin
         if BANK_USERS.include?(transaction.user.name)
